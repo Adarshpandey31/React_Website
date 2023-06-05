@@ -5,7 +5,7 @@ import mens_outwear from '../assets/mens_outerwear.jpg';
 import ladies_outerwear from '../assets/ladies_outerwear.jpg';
 import ladies_tshirt from '../assets/ladies_tshirtss.jpg';
 
-function Home() {
+function Body_Home() {
   return (
     <>
     <div className="box1">
@@ -55,4 +55,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default Body_Home;

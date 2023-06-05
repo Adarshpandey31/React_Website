@@ -37,15 +37,15 @@ function HeaderPart() {
   return (
     <>
       <div className="topContainer">
-        <a href="/" className="title">SHOP</a>
+        <Link to="/" className="title">SHOP</Link>
         <div className="logo">
           <img src={logo_img} alt="" className="logo1" />
         </div>
         <nav className="navbar">
-          <a href="/mens_outerwear" className="column first">Men's Outerwear</a>
-          <a href="/ladies_outerwear" className="column second">Ladies Outerwear</a>
-          <a href="/mens_tshirts" className="column third">Men's T-Shirts</a>
-          <a href="/ladies_tshirts" className="column fourth">Ladies T-Shirts</a>
+          <Link to="/mens_outerwear" className="column first">Men's Outerwear</Link>
+          <Link to="/ladies_outerwear" className="column second">Ladies Outerwear</Link>
+          <Link to="/mens_tshirts" className="column third">Men's T-Shirts</Link>
+          <Link to="/ladies_tshirts" className="column fourth">Ladies T-Shirts</Link>
         </nav>
 
         <Link to='#' className="hamburger-icon" onClick={toggleSidebar}>
@@ -65,10 +65,10 @@ function HeaderPart() {
               <li>
                 <div className="horizontal-line"></div>
               </li>
-              <li><a href="/mens_outerwear" className="column first">Men's Outerwear</a></li>
-              <li><a href="/ladies_outerwear" className="column second">Ladies Outerwear</a></li>
-              <li><a href="/mens_tshirts" className="column third">Men's T-Shirts</a></li>
-              <li><a href="/ladies_tshirts" className="column fourth">Ladies T-Shirts</a></li>
+              <Link to="/mens_outerwear" className="column first">Men's Outerwear</Link>
+              <Link to="/ladies_outerwear" className="column second">Ladies Outerwear</Link>
+              <Link to="/mens_tshirts" className="column third">Men's T-Shirts</Link>
+              <Link to="/ladies_tshirts" className="column fourth">Ladies T-Shirts</Link>
             </ul>
           </div>
         </div>
