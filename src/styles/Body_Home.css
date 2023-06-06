@@ -16,7 +16,7 @@ body {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 18px;
     font-weight: 500;
     margin: 32px 0;
     display: block;
@@ -55,11 +55,11 @@ img {
     box-sizing: border-box;
     border: 2px solid #000;
     background-color: #FFF;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--app-primary-color);
     margin: 0;
-    padding: 8px 44px;
+    padding: 8px 32px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -68,16 +68,16 @@ img {
 }
 button{
     border: 0;
+    background:white;
 }
 
-@media (max-width: 1000px){
+@media (min-width: 0px){
 
     
     .box1{
-    width: 100%;
     margin-left: 0 ;
     margin-right: 0 ;
-}
+    }
 
 }
 

@@ -42,20 +42,20 @@ function HeaderPart() {
           <img src={logo_img} alt="" className="logo1" />
         </div>
         <nav className="navbar">
-          <Link to="/mens_outerwear" className="column first">Men's Outerwear</Link>
+          <Link to="/mens_outerwear" className="column first">Men&apos;s Outerwear</Link>
           <Link to="/ladies_outerwear" className="column second">Ladies Outerwear</Link>
-          <Link to="/mens_tshirts" className="column third">Men's T-Shirts</Link>
+          <Link to="/mens_tshirts" className="column third">Men&apos;s T-Shirts</Link>
           <Link to="/ladies_tshirts" className="column fourth">Ladies T-Shirts</Link>
         </nav>
 
         <Link to='#' className="hamburger-icon" onClick={toggleSidebar}>
-          <FaIcons.FaBars />
+          <FaIcons.FaBars className ="ham-icon"/>
         </Link>
       </div>
 
       {sidebarOpen && (
         <div className="sidebar-overlay">
-          <div className="sidebar" useRef={sidebarRef}>
+          <div className="sidebar" > {/***useRed*/}
             <ul className="sidebar-menu">
               <li>
                 <Link to='#' className="Sidebaricon" onClick={toggleSidebar}>
@@ -65,9 +65,9 @@ function HeaderPart() {
               <li>
                 <div className="horizontal-line"></div>
               </li>
-              <li><Link to="/mens_outerwear" className="column first">Men's Outerwear</Link></li>
+              <li><Link to="/mens_outerwear" className="column first">Men&apos;s Outerwear</Link></li>
               <li><Link to="/ladies_outerwear" className="column second">Ladies Outerwear</Link></li>
-              <li><Link to="/mens_tshirts" className="column third">Men's T-Shirts</Link></li>
+              <li><Link to="/mens_tshirts" className="column third">Men&apos;s T-Shirts</Link></li>
               <li><Link to="/ladies_tshirts" className="column fourth">Ladies T-Shirts</Link></li>
             </ul>
           </div>

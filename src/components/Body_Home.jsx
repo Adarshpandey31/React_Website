@@ -10,7 +10,7 @@ function Body_Home() {
     <>
     <div className="box1">
         <img src ={mens_outwear} className="imgg"></img>
-        <h2>Men's Outwear</h2>
+        <h2>Men&apos;s Outwear</h2>
         <button className="shop-btn">
             <a href="/mens_outerwearwear" className="text_btn" aria-label="Men's Outerwear Shop Now">
                 Shop Now
@@ -32,7 +32,7 @@ function Body_Home() {
 
    <div className="box1 box3">
     <img src={mens_tshirts} className="img img3"></img>
-    <h2>Men's T-Shirts</h2>
+    <h2>Men&apos;s T-Shirts</h2>
     <button className="shop-btn">
         <a href="/mens_tshirt" className="text_btn" aria-label="Men's T-Shirts Shop Now">
             Shop Now

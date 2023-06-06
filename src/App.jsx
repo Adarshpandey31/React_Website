@@ -1,14 +1,18 @@
+<eslint-disabled />
+
 import React from 'react';
-import {createRoutesFromElements, RouterProvider, BrowserRouter, Routes,  Outlet, Route, errorElement } from 'react-router-dom';
-import HeaderPart from './components/HeaderPart.jsx';
-import Body_Home from './components/Body_Home.jsx';
-import Footer from './components/Footer.jsx';
+// createRoutesFromElements, RouterProvider,errorElement,Outlet,
+import { BrowserRouter, Routes,   Route,  } from 'react-router-dom';
+// import HeaderPart from './components/HeaderPart.jsx';
+// import Body_Home from './components/Body_Home.jsx';
+// import Footer from './components/Footer.jsx';
 import Home from './Pages/Home.jsx';
 import Mens_Outerwear from './Pages/Mens_Outerwear.jsx';
 import Ladies_Outerwear from './Pages/Ladies_Outerwear.jsx';
 import Mens_Tshirts from './Pages/Mens_Tshirts.jsx';
 import Ladies_Tshirts from './Pages/Ladies_Tshirts.jsx';
 
+import './styles/reset.css';
 import './styles/HeaderPart.css';
 import './styles/Footer.css';
 import './styles/Body_Home.css';
@@ -47,7 +51,7 @@ function App() {
   // )
 
 
-};
+}
 
 //another method -1 
 

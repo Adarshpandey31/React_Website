@@ -7,7 +7,7 @@
 
 .title {
   position: absolute;
-  font-size: 16px;
+  font-size: 20px;
   margin-top: 3px;
   font-weight: 600;
   letter-spacing: 0.3em;
@@ -32,14 +32,15 @@
 }
 
 .logo1 {
-  height: 35px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
   pointer-events: auto;
 }
 
 .navbar {
   display: inline-block;
   padding: 9px 1px;
+  font-size: 1.2em;
   /* border: 2px solid black; */
   width: 100%;
   text-align: center;
@@ -60,7 +61,7 @@
   /* border: 2px solid black; */
 }
 
-@media (max-width: 510px) {
+@media (max-width: 640px) {
   .navbar {
     display: none;
     /* Hide the menu items */
@@ -68,6 +69,7 @@
 
   .title {
     position: relative;
+    letter-spacing: 0.2em;
     text-align: center;
     display: inline-block;
     pointer-events: auto;
@@ -88,8 +90,13 @@
     margin-top: 5.5px;
     /* margin-bottom: 3.5px; */
     color: black;
-    width: 20px;
-    height: 8px;
+    /* width: 20px; */
+    /* height: 8px; */
+  }
+
+  .ham-icon{
+    width: 18px;
+    height: 20px;
   }
 
   .topContainer {
@@ -99,16 +106,16 @@
     margin-bottom: 20px;
   }
 
-
-
   .sidebar {
+    font-size: 20px;
     position: fixed;
-    top: 0;
+    top: 0px;
     text-align: left;
     width: 70%;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     margin: 0;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     transition: left 0.3s ease;
     z-index: 999;
     overflow-y: auto;
@@ -130,7 +137,8 @@
 
   .sidebar-menu {
     padding: 15px;
-    padding-left: 5px;
+    padding-top: 25px;
+    padding-left: 4px;
     list-style: none;
   }
 
