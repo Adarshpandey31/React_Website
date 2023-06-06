@@ -65,10 +65,10 @@ function HeaderPart() {
               <li>
                 <div className="horizontal-line"></div>
               </li>
-              <Link to="/mens_outerwear" className="column first">Men's Outerwear</Link>
-              <Link to="/ladies_outerwear" className="column second">Ladies Outerwear</Link>
-              <Link to="/mens_tshirts" className="column third">Men's T-Shirts</Link>
-              <Link to="/ladies_tshirts" className="column fourth">Ladies T-Shirts</Link>
+              <li><Link to="/mens_outerwear" className="column first">Men's Outerwear</Link></li>
+              <li><Link to="/ladies_outerwear" className="column second">Ladies Outerwear</Link></li>
+              <li><Link to="/mens_tshirts" className="column third">Men's T-Shirts</Link></li>
+              <li><Link to="/ladies_tshirts" className="column fourth">Ladies T-Shirts</Link></li>
             </ul>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {createRoutesFromElements, RouterProvider, BrowserRouter, Routes,  Outlet, Route } from 'react-router-dom';
+import {createRoutesFromElements, RouterProvider, BrowserRouter, Routes,  Outlet, Route, errorElement } from 'react-router-dom';
 import HeaderPart from './components/HeaderPart.jsx';
 import Body_Home from './components/Body_Home.jsx';
 import Footer from './components/Footer.jsx';
@@ -20,7 +20,7 @@ function App() {
     <BrowserRouter>
 
     <Routes>
-      <Route path ="/" element = {<Home />} />
+      <Route path ="/" element = {<Home />  } />
       <Route path ="/mens_outerwear" element = {<Mens_Outerwear />} />
       <Route path ="/ladies_outerwear" element = {<Ladies_Outerwear />} />
       <Route path ="/mens_tshirts" element = {<Mens_Tshirts />} />
