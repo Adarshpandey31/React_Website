@@ -45,7 +45,7 @@
   width: 100%;
   text-align: center;
   margin-bottom: 12px;
-  margin-top: 20px;
+  margin-top: 18px;
 
 }
 
@@ -65,7 +65,7 @@
 }
 
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
   .navbar {
     display: none;
     /* Hide the menu items */
@@ -82,7 +82,7 @@
   .logo {
     /* border: 2px solid black; */
     float: right;
-    margin-right: 1em;
+    margin-right: 1.2em;
     margin-top: -1px;
   }
 
@@ -90,7 +90,7 @@
     float: left;
     display: block;
     cursor: pointer;
-    margin-left: 1em;
+    margin-left: 1.2em;
     margin-top: 5.5px;
     /* margin-bottom: 3.5px; */
     color: black;
@@ -170,10 +170,11 @@
   }
 
   .topContainer {
-    margin-top: 1.5em;
+    margin-top: 16px;
     text-align: center;
-    height: 30px;
-    margin-bottom: 2.1em;
+    height: 32px;
+    margin-bottom: 16px;
+    /* border-top: 2px solid black; */
   }
 }
 

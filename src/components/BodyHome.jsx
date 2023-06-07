@@ -20,7 +20,7 @@ function BodyHome() {
 
     <div className="box1">
     <img src ={ladies_outerwear} className="img"></img>
-    <h2 className = "img-title">Ladies Outwear</h2>
+    <h2 className = "img-title">Ladies Outerwear</h2>
     <button className="shop-btn">
         <a href="/ladies_outerwear" className="text_btn" aria-label="Ladies Outerwear Shop Now">
             Shop Now
