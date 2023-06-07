@@ -1,13 +1,13 @@
 import React from 'react';
 import HeaderPart from '../components/HeaderPart.jsx';
-import Mens_Outerwear_Body from '../components/Mens_Outerwear_Body.jsx';
+import MensOuterwearBody from '../components/MensOuterwearBody.jsx';
 import Footer from '../components/Footer.jsx';
 
 function Mens_Outerwear() {
   return (
     <>
     <HeaderPart />
-    <Mens_Outerwear_Body />
+    <MensOuterwearBody />
     <Footer />
     </>
   )

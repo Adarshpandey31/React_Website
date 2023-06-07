@@ -15,7 +15,7 @@ import Ladies_Tshirts from './Pages/Ladies_Tshirts.jsx';
 import './styles/reset.css';
 import './styles/HeaderPart.css';
 import './styles/Footer.css';
-import './styles/Body_Home.css';
+import './styles/BodyHome.css';
 
 function App() {
 
