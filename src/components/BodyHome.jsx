@@ -8,6 +8,7 @@ import ladies_tshirt from '../assets/ladies_tshirtss.jpg';
 function BodyHome() {
   return (
     <>
+    <div className="main-body-home">
     <div className= "box1">
         <img src ={mens_outwear} className="imgg" ></img>
         <h2 className = "img-title">Men&apos;s Outerwear</h2>
@@ -19,7 +20,7 @@ function BodyHome() {
     </div>
 
     <div className="box1">
-    <img src ={ladies_outerwear} className="img"></img>
+    <img src ={ladies_outerwear} className="imgg"></img>
     <h2 className = "img-title">Ladies Outerwear</h2>
     <button className="shop-btn">
         <a href="/ladies_outerwear" className="text_btn" aria-label="Ladies Outerwear Shop Now">
@@ -31,7 +32,7 @@ function BodyHome() {
    <div className="box2">
 
    <div className="box1 box3">
-    <img src={mens_tshirts} className="img img3"></img>
+    <img src={mens_tshirts} className="imgg img3"></img>
     <h2 className = "img-title">Men&apos;s T-Shirts</h2>
     <button className="shop-btn">
         <a href="/mens_tshirt" className="text_btn" aria-label="Men's T-Shirts Shop Now">
@@ -41,7 +42,7 @@ function BodyHome() {
    </div>
 
    <div className="box1 box4">
-    <img src ={ladies_tshirt} className="img img4"></img>
+    <img src ={ladies_tshirt} className="imgg img4"></img>
     <h2 className = "img-title">Ladies T-Shirts</h2>
     <button className="shop-btn">
         <a href="/ladies_tshirts" className="text_btn" aria-label="Ladies T-Shirts Shop Now">
@@ -50,6 +51,7 @@ function BodyHome() {
     </button>
    </div>
    
+   </div>
    </div>
 </>
   )

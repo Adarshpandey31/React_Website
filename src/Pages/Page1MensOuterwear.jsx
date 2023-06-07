@@ -1,16 +1,16 @@
 import React from 'react';
 import HeaderPart from '../components/HeaderPart.jsx';
-import MensOuterwearBody from '../components/MensOuterwearBody.jsx';
+import Page1 from '../components/Page1.jsx';
 import Footer from '../components/Footer.jsx';
 
-function Mens_Outerwear() {
+function Page1MensOuterwear() {
   return (
     <>
     <HeaderPart />
-    <MensOuterwearBody />
+    <Page1 />
     <Footer />
     </>
   )
 }
 
-export default Mens_Outerwear;
+export default Page1MensOuterwear;

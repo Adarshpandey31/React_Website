@@ -7,15 +7,16 @@ import { BrowserRouter, Routes,   Route,  } from 'react-router-dom';
 // import Body_Home from './components/Body_Home.jsx';
 // import Footer from './components/Footer.jsx';
 import Home from './Pages/Home.jsx';
-import Mens_Outerwear from './Pages/Mens_Outerwear.jsx';
-import Ladies_Outerwear from './Pages/Ladies_Outerwear.jsx';
-import Mens_Tshirts from './Pages/Mens_Tshirts.jsx';
-import Ladies_Tshirts from './Pages/Ladies_Tshirts.jsx';
+import Page1MensOuterwear from './Pages/Page1MensOuterwear.jsx';
+import Page2LadiesOuterwear from './Pages/Page2LadiesOuterwear.jsx';
+import Page3MensTshirts from './Pages/Page3MensTshirts';
+import Page4LadiesTshirts from './Pages/Page4LadiesTshirts.jsx';
 
 import './styles/reset.css';
 import './styles/HeaderPart.css';
 import './styles/Footer.css';
 import './styles/BodyHome.css';
+import './styles/Page1.css';
 
 function App() {
 
@@ -25,10 +26,10 @@ function App() {
 
     <Routes>
       <Route path ="/" element = {<Home />  } />
-      <Route path ="/mens_outerwear" element = {<Mens_Outerwear />} />
-      <Route path ="/ladies_outerwear" element = {<Ladies_Outerwear />} />
-      <Route path ="/mens_tshirts" element = {<Mens_Tshirts />} />
-      <Route path ="/ladies_tshirts" element = {<Ladies_Tshirts />} />
+      <Route path ="/mens_outerwear" element = {<Page1MensOuterwear />} />
+      <Route path ="/ladies_outerwear" element = {<Page2LadiesOuterwear />} />
+      <Route path ="/mens_tshirts" element = {<Page3MensTshirts />} />
+      <Route path ="/ladies_tshirts" element = {<Page4LadiesTshirts />} />
     </Routes>
     
     </BrowserRouter>

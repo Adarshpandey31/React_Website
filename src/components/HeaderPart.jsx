@@ -11,6 +11,13 @@ function HeaderPart() {
     setSidebar(!sidebarOpen);
   };
 
+  const closeSidebar = () => {
+    if(sidebarOpen)
+    {
+      setSidebar(!sidebarOpen);
+    }
+  };
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
@@ -20,7 +27,7 @@ function HeaderPart() {
 
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      if (screenWidth > 510) {
+      if (screenWidth > 500) {
         setSidebar(false);
       }
     };
@@ -34,14 +41,42 @@ function HeaderPart() {
     };
   }, []);
 
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') { 
+      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+        setShow(false); 
+      } else { // if scroll up show the navbar
+        setShow(true);  
+      }
+
+      // remember current page location to use in the next move
+      setLastScrollY(window.scrollY); 
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
+  
   return (
     <>
-      <div className="topContainer">
+      <div className={`topContainer ${show && 'hidden'}`} >
         <Link to="/" className="title">SHOP</Link>
         <div className="logo">
           <img src={logo_img} alt="" className="logo1" />
         </div>
-        <nav className="navbar">
+        <nav className="navbar" >
           <Link to="/mens_outerwear" className="column first">Men&apos;s Outerwear</Link>
           <Link to="/ladies_outerwear" className="column second">Ladies Outerwear</Link>
           <Link to="/mens_tshirts" className="column third">Men&apos;s T-Shirts</Link>
@@ -49,12 +84,12 @@ function HeaderPart() {
         </nav>
 
         <Link to='#' className="hamburger-icon" onClick={toggleSidebar}>
-          <FaIcons.FaBars className ="ham-icon"/>
+          <FaIcons.FaBars className="ham-icon" />
         </Link>
       </div>
 
       {sidebarOpen && (
-        <div className="sidebar-overlay">
+        <div className="sidebar-overlay" onClick={closeSidebar}>
           <div className="sidebar" > {/***useRed*/}
             <ul className="sidebar-menu">
               <li>

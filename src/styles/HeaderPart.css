@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+.hidden{
+  margin-top: 15px;
+  /* border: 2px solid black; */
+  text-align: center;
+}
+
 .title {
   position: absolute;
   font-size: 16px;
@@ -39,15 +45,16 @@
 
 .navbar {
   display: inline-block;
-  padding: 3px 1px;
+  padding: 10px 1px;
   font-size: 1em;
   /* border: 2px solid black; */
   width: 100%;
   text-align: center;
-  margin-bottom: 12px;
-  margin-top: 18px;
-
+  margin-bottom: 2px;
+  margin-top: 10px;
 }
+
+
 
 .column {
   display: inline-block;
@@ -129,9 +136,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
-    z-index: 998;
+    z-index: 990;
   }
 
   .sidebar-menu {
