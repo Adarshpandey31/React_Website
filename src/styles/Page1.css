@@ -6,7 +6,7 @@
 
 
 
-.box1-page1{
+.top-box{
     display: block;
     text-decoration: none;
     text-align: center;
@@ -20,7 +20,7 @@ header{
     text-align: center;
 }
 
-.img-title-page1 {
+.img-title-page {
     font-size: 16px;
     font-weight: 500;
     display: block;
@@ -34,7 +34,7 @@ span{
     opacity: 0.9;
 }
 
-.imgg-menswear-head-page1 {
+.imgg-head-pages {
     max-width: 100%;
     transition: 0.5s opacity;
     width: 100%;
@@ -71,11 +71,13 @@ span{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 40px 0px 0px 0px;
+    margin: 50px 0px 0px 0px;
     padding: 0;
     list-style: none;
     /* border: 2px solid rgb(183, 21, 48); */
+    padding: 5px 30px ;
 }
+
 
 .item{
     display: list-item;
@@ -85,7 +87,7 @@ span{
     max-width: 30%;
     /* border: 1px solid rgb(21, 113, 183); */
     margin: 0px 10px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 
 Link{
@@ -107,20 +109,16 @@ Link{
     margin: 0;
     /* border: 1px solid rgb(19, 152, 39); */
     width: 70%;
-    height: 70%;
-   
 }
 
 .img-detail{
     color: black;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 35px;
     /* border: 1px solid rgb(148, 196, 25); */
+    text-align: center;
 }
 
-div{
-    display: block;
-}
 
 @media (max-width: 1200px){
  
