@@ -20,7 +20,7 @@ function MensOuterwearBody() {
       <div className="top-box">
         <img src={mens_tshirts} className="imgg-head-pages" ></img>
         <header >
-          <h2 className="img-title-pagei">Men&apos;s T-Shirts</h2>
+          <h2 className="img-title-page">Men&apos;s T-Shirts</h2>
           <span>(10 items)</span>
         </header>
       </div>
