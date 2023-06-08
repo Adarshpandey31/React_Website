@@ -136,7 +136,7 @@ Link{
 
 @media  (max-width: 700px) {
 
-    .imgg-menswear-head-page1{
+    .imgg-head-pages{
         display: none;
         margin: 0;
         padding: 0;
@@ -155,6 +155,7 @@ Link{
         margin-left: 0;
         margin-right: 0;
         justify-content: baseline;
+        padding: 5px 50px ;
     }
 
     .item{
@@ -164,6 +165,7 @@ Link{
         margin-left: 0;
         margin-right: 0;
     }
+
     .each-img-item{
         display: inline-block;
         margin-left: 0;
@@ -172,8 +174,7 @@ Link{
         overflow: hidden;
         /* border: 1px solid rgb(19, 152, 39); */
         width: 90%;
-        height: 90%;
-       
+        height: 90%; 
     }
 
    
