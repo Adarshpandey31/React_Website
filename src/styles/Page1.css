@@ -95,12 +95,12 @@ Link{
     text-decoration: underline;
 }
 
-.page1-item-img-link{
+.item-link-to-dscrp{
     display: block;
     text-decoration: none;
 }
 
-.page-1-items{
+.each-img-item{
     display: inline-block;
     margin-left: 0;
     margin-right: 0;
@@ -164,7 +164,7 @@ Link{
         margin-left: 0;
         margin-right: 0;
     }
-    .page-1-items{
+    .each-img-item{
         display: inline-block;
         margin-left: 0;
         margin-right: 0;
