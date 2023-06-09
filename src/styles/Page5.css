@@ -1,0 +1,106 @@
+
+
+.main-box {
+    border: 1px solid black;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 70px;
+    margin-right: 70px;
+    min-height: 500px;
+    margin-bottom: 43px;
+}
+
+.item-img-top-box {
+    border: 1px solid brown;
+    padding: 20px;
+    width: 45%;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: grid;
+    place-items: center;
+}
+
+.img-display{
+    display: grid;
+    place-items: center;
+    border: 1px solid salmon;
+    padding: 1px;
+    
+    margin-left: 100px;
+    position: relative;
+}
+
+.selected-item-img {
+    border: 1px solid  rgba(158, 150, 150, 0.8);
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    height: 320px;
+    /* left: 50%;
+    top: 40%;
+    Transform: translate(-50%, -40%); */
+    margin-bottom: 20px;
+
+}
+
+.buttons {
+    /* border: 1px solid green; */
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    text-decoration-color: white;
+    cursor: pointer;
+}
+
+.cart-button-1 {
+    background-color: #ff9f00;
+    margin: 3px;
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    width: 7em;
+    cursor: pointer;
+}
+.cart-button-2 {
+    background-color: #fb641b;
+    margin: 3px;
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    width: 7em;
+    cursor: pointer;
+}
+
+.item-details-top-box {
+    border: 1px solid brown;
+    padding: 15px;
+    width: 55%;
+    /* margin-left: 10px; */
+    justify-content: center;
+    
+}
+
+.popBar{
+    display: inline;
+    margin: 0;
+    padding: 2px;
+    border: 1px solid rgb(13, 3, 3, 0.4);
+    text-align: center;
+    justify-content: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: aliceblue;
+    margin-top: 2px;
+    margin-right: 10px;
+}

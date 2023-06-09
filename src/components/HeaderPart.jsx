@@ -49,7 +49,9 @@ function HeaderPart() {
       <div className={`topContainer`} >
         <Link to="/" className="title">SHOP</Link>
         <div className="logo">
-          <img src={logo_img} alt="" className="logo1" />
+          <Link to ="/cart" className ="logo-link">
+            <img src={logo_img} alt="" className="logo1" />
+          </Link>
         </div>
         <nav className="navbar" >
           <Link to="/mens_outerwear" className="column first">Men&apos;s Outerwear</Link>

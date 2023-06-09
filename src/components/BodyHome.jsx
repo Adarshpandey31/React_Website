@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import ladies_tshirts from '../assets/ladies_tshirts.jpg';
 import mens_tshirts from '../assets/mens_tshirts.jpg';
 import mens_outwear from '../assets/mens_outerwear.jpg';
@@ -13,9 +14,9 @@ function BodyHome() {
         <img src ={mens_outwear} className="imgg" ></img>
         <h2 className = "img-title">Men&apos;s Outerwear</h2>
         <button className="shop-btn">
-            <a href="/mens_outerwearwear" className="text_btn" aria-label="Men's Outerwear Shop Now">
+            <Link to="/mens_outerwear" className="text_btn" aria-label="Men's Outerwear Shop Now">
                 Shop Now
-            </a>
+            </Link>
         </button>
     </div>
 
@@ -23,9 +24,9 @@ function BodyHome() {
     <img src ={ladies_outerwear} className="imgg"></img>
     <h2 className = "img-title">Ladies Outerwear</h2>
     <button className="shop-btn">
-        <a href="/ladies_outerwear" className="text_btn" aria-label="Ladies Outerwear Shop Now">
+        <Link to="/ladies_outerwear" className="text_btn" aria-label="Ladies Outerwear Shop Now">
             Shop Now
-        </a>
+        </Link>
     </button>
    </div>
 
@@ -35,9 +36,9 @@ function BodyHome() {
     <img src={mens_tshirts} className="imgg img3"></img>
     <h2 className = "img-title">Men&apos;s T-Shirts</h2>
     <button className="shop-btn">
-        <a href="/mens_tshirt" className="text_btn" aria-label="Men's T-Shirts Shop Now">
+        <Link to="/mens_tshirts" className="text_btn" aria-label="Men's T-Shirts Shop Now">
             Shop Now
-        </a>
+        </Link>
     </button>
    </div>
 
@@ -45,9 +46,9 @@ function BodyHome() {
     <img src ={ladies_tshirt} className="imgg img4"></img>
     <h2 className = "img-title">Ladies T-Shirts</h2>
     <button className="shop-btn">
-        <a href="/ladies_tshirts" className="text_btn" aria-label="Ladies T-Shirts Shop Now">
+        <Link to="/ladies_tshirts" className="text_btn" aria-label="Ladies T-Shirts Shop Now">
             Shop Now
-        </a>
+        </Link>
     </button>
    </div>
    
