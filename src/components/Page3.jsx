@@ -29,7 +29,7 @@ function MensOuterwearBody() {
         <ul className="items">
 
           <li className="item item-1-1">
-            <Link to="/" className='item-link-to-dscrp'>
+            <Link to={`/mens_outerwear/details/img3_1`} id ="img3_1" className="item-link-to-dscrp">
               <img src={img3_1} alt="" className="each-img-item" />
               <div className="img-detail">Youtube Organic Cotton T-Shirts - Grey</div>
               <span className="price">$50.20</span>
@@ -37,7 +37,7 @@ function MensOuterwearBody() {
           </li>
 
           <li className="item item-1-2">
-            <Link to="/" className='item-link-to-dscrp'>
+            <Link to={`/mens_outerwear/details/img3_2`} id ="img3_2" className="item-link-to-dscrp">
               <img src={img3_2} alt="" className="each-img-item" />
               <div className="img-detail">Inbox - Subtle Actions T- Shirt</div>
               <span className="price">$50.20</span>
@@ -45,7 +45,7 @@ function MensOuterwearBody() {
           </li>
 
           <li className="item item-1-3">
-            <Link to="/" className='item-link-to-dscrp'>
+            <Link to={`/mens_outerwear/details/img3_3`} id ="img3_3" className="item-link-to-dscrp">
               <img src={img3_3} alt="" className="each-img-item" />
               <div className="img-detail">Adult Android Superhero T - Shirt</div>
               <span className="price">$50.20</span>
@@ -53,7 +53,7 @@ function MensOuterwearBody() {
           </li>
 
           <li className="item item-1-4">
-            <Link to="/" className='item-link-to-dscrp'>
+            <Link to={`/mens_outerwear/details/img3_4`} id ="img3_4" className="item-link-to-dscrp">
               <img src={img3_4} alt="" className="each-img-item" />
               <div className="img-detail">Men&apos;s Tech Shell Full-zip</div>
               <span className="price">$50.20</span>
@@ -61,7 +61,7 @@ function MensOuterwearBody() {
           </li>
 
           <li className="item item-1-5">
-          <Link to="/" className='item-link-to-dscrp' >
+          <Link to={`/mens_outerwear/details/img3_5`} id ="img3_5" className="item-link-to-dscrp" >
               <img src={img3_5} alt="" className="each-img-item" />
               <div className="img-detail">Men&apos;s Tech Shell Full-zip</div>
               <span className="price">$50.20</span>
@@ -69,7 +69,7 @@ function MensOuterwearBody() {
           </li>
 
           <li className="item item-1-6">
-          <Link to="/" className='item-link-to-dscrp'>
+          <Link to={`/mens_outerwear/details/img3_6`} id ="img3_6" className="item-link-to-dscrp">
               <img src={img3_6} alt="" className="each-img-item" />
               <div className="img-detail">Men&apos;s Tech Shell Full-zip</div>
               <span className="price">$50.20</span>
@@ -77,7 +77,7 @@ function MensOuterwearBody() {
           </li>
 
           <li className="item item-1-7">
-             <Link to="/" className='item-link-to-dscrp'>
+             <Link to={`/mens_outerwear/details/img3_7`} id ="img3_7" className="item-link-to-dscrp">
               <img src={img3_7} alt="" className="each-img-item" />
               <div className="img-detail">Men&apos;s Tech Shell Full-zip</div>
               <span className="price">$50.20</span>
@@ -85,7 +85,7 @@ function MensOuterwearBody() {
           </li>
 
           <li className="item item-1-8">
-             <Link to="/" className='item-link-to-dscrp' >
+             <Link to={`/mens_outerwear/details/img3_8`} id ="img3_8" className="item-link-to-dscrp" >
               <img src={img3_8} alt="" className="each-img-item" />
               <div className="img-detail">Men&apos;s Tech Shell Full-zip</div>
               <span className="price">$50.20</span>
@@ -93,14 +93,14 @@ function MensOuterwearBody() {
           </li>
 
           <li className="item item-1-9">
-             <Link to="/" className='item-link-to-dscrp' >
+             <Link to={`/mens_outerwear/details/img3_9`} id ="img3_9" className="item-link-to-dscrp" >
               <img src={img3_9} alt="" className="each-img-item" />
               <div className="img-detail">Men&apos;s Tech Shell Full-zip</div>
               <span className="price">$50.20</span>
             </Link>
           </li>
           <li className="item item-1-10">
-          <Link to="/" className='item-link-to-dscrp' >
+          <Link to={`/mens_outerwear/details/img3_0`} id ="img3_0" className="item-link-to-dscrp" >
               <img src={img3_0} alt="" className="each-img-item" />
               <div className="img-detail">Men&apos;s Tech Shell Full-zip</div>
               <span className="price">$50.20</span>

@@ -11,6 +11,7 @@ import img2_6 from '../assets/ladies_outerwear/11-6B.jpg';
 
 
 function MensOuterwearBody() {
+
   return (
     <div className="main-body">
 
@@ -26,7 +27,7 @@ function MensOuterwearBody() {
         <ul className="items">
 
           <li className="item item-1-1">
-            <Link to="/" className='item-link-to-dscrp'>
+            <Link to={`/mens_outerwear/details/img2_1`} id ="img2_1" className="item-link-to-dscrp" >
               <img src={img2_1} alt="" className="each-img-item" />
               <div className="img-detail">Ladies Tech Shell Full-zip</div>
               <span className="price">$50.20</span>
@@ -34,7 +35,7 @@ function MensOuterwearBody() {
           </li>
 
           <li className="item item-1-2">
-            <Link to="/" className='item-link-to-dscrp'>
+            <Link to={`/mens_outerwear/details/img2_2`} id ="img2_2" className="item-link-to-dscrp" >
               <img src={img2_2} alt="" className="each-img-item" />
               <div className="img-detail">Ladies Tech Shell Full-zip</div>
               <span className="price">$50.20</span>
@@ -42,7 +43,7 @@ function MensOuterwearBody() {
           </li>
 
           <li className="item item-1-3">
-            <Link to="/" className='item-link-to-dscrp'>
+            <Link to={`/mens_outerwear/details/img2_3`}  id ="img2_3" className="item-link-to-dscrp" >
               <img src={img2_3} alt="" className="each-img-item" />
               <div className="img-detail">Ladies Tech Shell Full-zip</div>
               <span className="price">$50.20</span>
@@ -50,7 +51,7 @@ function MensOuterwearBody() {
           </li>
 
           <li className="item item-1-4">
-            <Link to="/" className='item-link-to-dscrp'>
+            <Link to={`/mens_outerwear/details/img2_4`}  id ="img2_4" className="item-link-to-dscrp" >
               <img src={img2_4} alt="" className="each-img-item" />
               <div className="img-detail">Ladies Tech Shell Full-zip</div>
               <span className="price">$50.20</span>
@@ -58,7 +59,7 @@ function MensOuterwearBody() {
           </li>
 
           <li className="item item-1-5">
-          <Link to="/" className='item-link-to-dscrp' >
+          <Link to={`/mens_outerwear/details/img2_5`}  id ="img2_5" className="item-link-to-dscrp"  >
               <img src={img2_5} alt="" className="each-img-item" />
               <div className="img-detail">Ladies Tech Shell Full-zip</div>
               <span className="price">$50.20</span>
@@ -66,7 +67,7 @@ function MensOuterwearBody() {
           </li>
 
           <li className="item item-1-6">
-          <Link to="/" className='item-link-to-dscrp'>
+          <Link to={`/mens_outerwear/details/img2_6`}  id ="img2_6" className="item-link-to-dscrp" >
               <img src={img2_6} alt="" className="each-img-item" />
               <div className="img-detail">Ladies Tech Shell Full-zip</div>
               <span className="price">$50.20</span>

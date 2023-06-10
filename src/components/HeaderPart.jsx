@@ -34,10 +34,8 @@ function HeaderPart() {
         setSidebar(false);
       }
     };
-
     // document.addEventListener("click", handleClickOutside);
     window.addEventListener("resize", handleResize);
-
     return () => {
       // document.removeEventListener("click", handleClickOutside);
       window.removeEventListener("resize", handleResize);

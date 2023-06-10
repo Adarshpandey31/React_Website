@@ -19,14 +19,17 @@ function Page7() {
 
           <div className="sub-forms-details account-details">
             <p className="sub-forms-headings account-details-title"> Account Information</p>
+
             <form >
               <input type="text" placeholder='Email' />
               <input type="number" placeholder='Phone Number' />
             </form>
+
           </div>
 
           <div className="sub-forms-details shipping-address-details">
             <p className="sub-forms-headings shipping-address-title"> Shipping Address</p>
+
             <form >
               <input type="text" placeholder='Address' />
               <input type="text" placeholder='City' />
@@ -36,6 +39,7 @@ function Page7() {
               </div>
               <input type='text' placeholder='Country' />
             </form>
+            
           </div>
 
           <div className="checkbox-adding-address">
@@ -48,15 +52,17 @@ function Page7() {
 
           {billingAddr &&
             (<div className="sub-forms-details billing-address-details">
+
               <form >
                 <input type="text" placeholder='Address' />
                 <input type="text" placeholder='City' />
-                <div className="specific-input-billing">
+                <div className="specific-input specific-input-billing">
                   <input className="specific-state" type="text" placeholder='State/Province' />
                   <input className="specific-pin" type="number" placeholder='Zip/Postal Code' />
                 </div>
                 <input type='text' placeholder='Country' />
               </form>
+
             </div>
             )}
 
@@ -64,18 +70,20 @@ function Page7() {
         <div className="main-sub-forms main-payment-method">
           <div className="sub-forms-details payment-method">
             <p className="sub-forms-headings payment-method-title"> Payment Method</p>
+
             <form>
               <input type="text" placeholder='Cardholder Name' />
               <input type="number" placeholder='Card Number' />
               <p style={{textAlign:'left', marginTop:'10px' , marginLeft:'5px'}} >Expiry</p>
-              <input type="date" />
-
-              
-              
+              <div className="specific-input specific-input-payment">
+                  <input className="specific-state" type="month" placeholder='Month' />
+                  <input className="specific-pin" type="number" placeholder='CVV' />
+              </div>
               <button className="placing-order-btn" placeholder='Place order' >
               Place order
               </button>
             </form>
+
           </div>
         </div>
       </div>
