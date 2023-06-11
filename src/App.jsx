@@ -1,8 +1,8 @@
-<eslint-disabled />
-
-import React from 'react';
+/* eslint-disable */
+import React, { useState } from 'react';
+// import PropTypes from 'prop-types';
 // createRoutesFromElements, RouterProvider,errorElement,Outlet,
-import { BrowserRouter, Routes,   Route,  } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 // import HeaderPart from './components/HeaderPart.jsx';
 // import Body_Home from './components/Body_Home.jsx';
 // import Footer from './components/Footer.jsx';
@@ -22,40 +22,44 @@ import './styles/Footer.css';
 import './styles/BodyHome.css';
 import './styles/Page1.css';
 import './styles/Page5.css';
+import './styles/Page6.css';
 import './styles/Page7.css';
 import './styles/App.css';
 
+
 function App() {
+  //adding element to the cart
+  const [cartList, setcartList] = useState([]);
 
-  return(
+  return (
     <>
-    
-    <BrowserRouter>
 
-    <Routes>
-      <Route path ="/" element = {<Home />  } />
-      <Route path = {"/mens_outerwear"}>
-        <Route index element = {<Page1MensOuterwear />}/>
-        <Route exact path = "/mens_outerwear/details/:id" element ={<Page5ItemDetails />} />
-      </Route>
-      <Route path ="/ladies_outerwear"  >
-        <Route index element = {<Page2LadiesOuterwear />} />
-        <Route exact path = "/ladies_outerwear/details/:id" element ={<Page5ItemDetails />} />
-      </Route>
-      <Route path ="/mens_tshirts"  >
-        <Route index  element = {<Page3MensTshirts />} />
-        <Route exact path = "/mens_tshirts/details/:id" element ={<Page5ItemDetails />} />
-      </Route>
-      <Route path ="/ladies_tshirts"  >
-      <Route index element = {<Page4LadiesTshirts />} />
-        <Route exact path = "/ladies_tshirts/details/:id" element ={<Page5ItemDetails />} />
-      </Route>
-      <Route path = "/cart" element={<Page6Cart />}/>
-      <Route path = "/checkout" element={<Page7Payment />}/>
-    </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path={"/mens_outerwear"}>
+            <Route index element={<Page1MensOuterwear />} />
+            <Route exact path="/mens_outerwear/details/:id" element={<Page5ItemDetails cartList={cartList} setcartList={setcartList} />} />
+          </Route>
+          <Route path="/ladies_outerwear"  >
+            <Route index element={<Page2LadiesOuterwear />} />
+            <Route exact path="/ladies_outerwear/details/:id" element={<Page5ItemDetails cartList={cartList} setcartList={setcartList} />} />
+          </Route>
+          <Route path="/mens_tshirts"  >
+            <Route index element={<Page3MensTshirts />} />
+            <Route exact path="/mens_tshirts/details/:id" element={<Page5ItemDetails cartList={cartList} setcartList={setcartList} />} />
+          </Route>
+          <Route path="/ladies_tshirts"  >
+            <Route index element={<Page4LadiesTshirts />} />
+            <Route exact path="/ladies_tshirts/details/:id" element={<Page5ItemDetails cartList={cartList} setcartList={setcartList} />} />
+          </Route>
+          <Route path="/cart" element={<Page6Cart cartList={cartList} setcartList={setcartList} />} />
+          <Route path="/checkout" element={<Page7Payment />} />
+        </Routes>
+      </BrowserRouter>
     </>
-    
+
   );
 
   //another method -1, For routing 
@@ -85,11 +89,11 @@ function App() {
 //      <div>
 //       <HeaderPart />
 //      </div>
-     
+
 //      <div>
 //       <Outlet/>
 //      </div>
-     
+
 //      {/* <div>
 //      <Footer />
 //      </div> */}
