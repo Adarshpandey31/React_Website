@@ -45,7 +45,7 @@ function ItemList(props) {
   };
 
   useEffect(() => {
-    const item = props.cartList.find(item => item.id === props.itemId);
+    const item = props.cartList.find(item => item.id === props.itemId && item.size === props.size);
     if (item) {
       setNum(item.quantity);
     }
