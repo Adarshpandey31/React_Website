@@ -62,8 +62,6 @@ function Page5(props) {
     const params = useParams();
     const id_value = params.id;
 
-
-
     let addCartElement = () => {
         console.log(props.cartList);
         const cartList = props.cartList || [];
