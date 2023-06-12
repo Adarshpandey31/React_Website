@@ -10,7 +10,8 @@ function Page5ItemDetails(props) {
     <>
       <HeaderPart />
       <Page5 cartList ={props.cartList} setcartList ={props.setcartList} />
-      <Footer />
+      <div className="cart-item-footer">
+      <Footer /></div>
     </>
   )
 }

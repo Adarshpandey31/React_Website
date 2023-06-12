@@ -7,9 +7,11 @@
     margin-left: 70px;
     margin-right: 70px;
     min-height: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
-
+.cart-button-mobile{
+    display: none;
+}
 
 footer {
     bottom: 0;
@@ -232,6 +234,26 @@ footer {
     width: 75%;
 }
 
+
+.img-detail-features {
+    padding: 2px;
+    padding-left: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(13, 3, 3, 0.9);
+    margin-bottom: 0px;
+    width: 80%;
+}
+
+.img-features-details {
+    color: rgb(13, 3, 3, 0.5);
+    margin-left: 15px;
+    padding: 0px 5px;
+    list-style: circle;
+    list-style-type: circle;
+}
+
 @media (max-width : 1150px) {
     
     .img-detail-price {
@@ -259,26 +281,6 @@ footer {
     }
 }
 
-.img-detail-features {
-    padding: 2px;
-    padding-left: 9px;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(13, 3, 3, 0.9);
-    margin-bottom: 0px;
-    width: 80%;
-}
-
-.img-features-details {
-    color: rgb(13, 3, 3, 0.5);
-    margin-left: 15px;
-    padding: 0px 5px;
-    list-style: circle;
-    list-style-type: circle;
-}
-
-
 @media (max-width : 900px) {
     .main-box {
         flex-direction: column;
@@ -304,20 +306,17 @@ footer {
         margin: 0px;
         margin-top: 1px;
     }
-    .buttons {
-        /* border: 1px solid green; */
-        margin-bottom: 0px;
-        display: none;
-    }
+    
     .item-details-top-box{
         width: auto;
         margin: 0;
         margin-bottom: 100px;
         padding-left: 40px;
         padding-right: 40px;
-
-        /* border-top: 1px solid rgb(0, 0, 0, 0.7); */
+        /* padding-bottom: 0; */
+        border-top: 1px solid rgb(0, 0, 0, 0.7);
     }
+    
     .item-details-box{
         width: auto;
         /* border: 1px solid black; */
@@ -341,11 +340,39 @@ footer {
     .main-box{
         padding: 0;
     }
+
+    
+    
 }
 @media (max-width : 600px) {
+
+    .cart-item-footer{
+        display: none;
+    }
+    .buttons {
+        /* border: 1px solid green; */
+        margin-bottom: 0px;
+        display: none;
+    }
     .item-details-top-box{
         padding-left: 5px;
         padding-right: 5px;
+        border-top: 1px solid rgb(0, 0, 0, 0.7);
+    }
+    .cart-button-mobile{
+      
+        display: inline-block;
+        background-color: blue;
+        height: 70px;
+        overflow: hidden;
+        background: orange;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+        position: sticky;
+        bottom: 0;
+        margin: 0;
     }
 }
 @media (max-width : 520px) {
