@@ -33,7 +33,7 @@ function Page5(props) {
     const id_value = params.id;
 
     let addCartElement = () => {
-        console.log(props.cartList);
+        // console.log(props.cartList);
         const cartList = props.cartList || [];
         const idValue = id_value; // Specify the value for the ID
         const sizeValue = document.getElementById('size-select').value; // Get the selected size

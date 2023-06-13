@@ -9,7 +9,7 @@ function Page6Cart(props) {
     return (
         // style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}
         <>
-            <HeaderPart />
+            <HeaderPart cartList ={props.cartList} setcartList ={props.setcartList}/>
             <Page6 cartList ={props.cartList} setcartList ={props.setcartList} />
             <Footer />
         </>

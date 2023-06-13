@@ -29,11 +29,13 @@ function ItemList(props) {
 
   const incNum = () => {
     setNum(num + 1);
+    props.addItemtoCart(props.itemId, props.size, num + 1);
   };
 
   const decNum = () => {
     if (num > 0) {
       setNum(num - 1);
+      props.addItemtoCart(props.itemId, props.size, num - 1);
     }
     if (num === 1) {
       removeItem();
@@ -62,7 +64,7 @@ function ItemList(props) {
         <div className="cart-item-details-qty">
           <div className="cart-item-details-qty-heading">Qty:</div>
           {/* <div className="incr-decr-button"> */}
-            <button type="button" className="decr" onClick={decNum}>-</button>
+            <button type="button" className="decr" onClick={() => {decNum(); }}>-</button>
             <div>{num}</div>
             <button type="button" className="incr" onClick={incNum}>+</button>
           {/* </div> */}

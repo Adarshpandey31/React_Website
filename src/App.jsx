@@ -37,25 +37,25 @@ function App() {
       <BrowserRouter>
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home cartList={cartList} setcartList={setcartList} />} />
           <Route path={"/mens_outerwear"}>
-            <Route index element={<Page1MensOuterwear />} />
+            <Route index element={<Page1MensOuterwear cartList={cartList} setcartList={setcartList} />} />
             <Route exact path="/mens_outerwear/details/:id" element={<Page5ItemDetails cartList={cartList} setcartList={setcartList} />} />
           </Route>
           <Route path="/ladies_outerwear"  >
-            <Route index element={<Page2LadiesOuterwear />} />
+            <Route index element={<Page2LadiesOuterwear cartList={cartList} setcartList={setcartList} />} />
             <Route exact path="/ladies_outerwear/details/:id" element={<Page5ItemDetails cartList={cartList} setcartList={setcartList} />} />
           </Route>
           <Route path="/mens_tshirts"  >
-            <Route index element={<Page3MensTshirts />} />
+            <Route index element={<Page3MensTshirts cartList={cartList} setcartList={setcartList} />} />
             <Route exact path="/mens_tshirts/details/:id" element={<Page5ItemDetails cartList={cartList} setcartList={setcartList} />} />
           </Route>
           <Route path="/ladies_tshirts"  >
-            <Route index element={<Page4LadiesTshirts />} />
+            <Route index element={<Page4LadiesTshirts cartList={cartList} setcartList={setcartList} />} />
             <Route exact path="/ladies_tshirts/details/:id" element={<Page5ItemDetails cartList={cartList} setcartList={setcartList} />} />
           </Route>
           <Route path="/cart" element={<Page6Cart cartList={cartList} setcartList={setcartList} />} />
-          <Route path="/checkout" element={<Page7Payment />} />
+          <Route path="/checkout" element={<Page7Payment cartList={cartList} setcartList={setcartList}  />} />
         </Routes>
       </BrowserRouter>
     </>

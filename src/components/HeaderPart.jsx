@@ -4,10 +4,34 @@ import logo_img from '../assets/logo1.png';
 import * as FaIcons from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-function HeaderPart() {
+function HeaderPart(props) {
   try {
     const [sidebarOpen, setSidebar] = useState(false);
+    const [cartSize, setCartSize] = useState(props.cartList ? props.cartList.length : 0);
     const sidebarRef = useRef(null);
+
+    const removeCartSize = () => {
+      if (props.cartList && props.cartList.length === 0) {
+        setCartSize(0);
+        console.log(cartSize);
+      }
+    }
+    useEffect(() => {
+      // console.log("props.cartList:", props.cartList);
+      // console.log(cartSize);
+      if (props.cartList && props.cartList.length !== 0)
+      {
+        const cartsize = props.cartList.reduce((count, item)=>{
+          count = count + item.quantity ;
+          return count;
+        }, 0);
+        setCartSize(cartsize);
+      }
+      else{
+        setCartSize(0);
+      }
+      
+    }, [props.cartList]);
 
     const toggleSidebar = () => {
       setSidebar(!sidebarOpen);
@@ -39,6 +63,7 @@ function HeaderPart() {
           <Link to="/" className="title">SHOP</Link>
           <div className="logo">
             <Link to="/cart" className="logo-link">
+            { cartSize > 0 && ( <div className="cart-size-display" onChange={removeCartSize}>{cartSize}</div> ) }
               <img src={logo_img} alt="" className="logo1" />
             </Link>
           </div>
