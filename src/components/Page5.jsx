@@ -1,28 +1,33 @@
 /* eslint-disable */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, useParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import img1_1 from '../assets/mens_outerwear/10-1B.jpg';
-
+import * as FaIcons from 'react-icons/fa';
 
 function Page5(props) {
     const navigate = useNavigate();
-    // const [showPopUp, setShowPopUp] = useState(false);
+    const [showPopUp, setShowPopUp] = useState(false);
+    const popupRef = useRef(null);
 
     //notifying item added to cart
     const popupMessage = () => {
-        // setShowPopUp(true);
+        setShowPopUp(true);
         // setTimeout(() => {
         //     setShowPopUp(false);
         // }, 3000);
-
-        toast('🦄  Added to Cart');
     };
+    const removeRemovePopupMessage = () => {
+        setShowPopUp(false);
+    }
 
     //navigating to direct checkout
     const goToPayment = () => {
         navigate('/checkout');
+    };
+    const goToCart = () =>{
+        navigate("/cart")
     };
     const params = useParams();
     const id_value = params.id;
@@ -63,48 +68,53 @@ function Page5(props) {
             console.error('setcartList is not a function');
         }
     };
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (popupRef.current && !popupRef.current.contains(event.target)) {
+                setShowPopUp(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     return (
         <>
+            {showPopUp && (
+                <>
+                <div className="popBar" ref={popupRef}>
+                    <div onClick={removeRemovePopupMessage} className="close-popup-button">
+                        <FaIcons.FaTimes />    
+                    </div>
+                    <div className="popbar-message">
+                        Added to Cart
+                    </div>
+                    <div className="pop-cart-buttons">
+                        <button onClick={() => { goToCart(); }} className="pop-cart-button-1">
+                            View Cart
+                        </button>
+                        <button onClick={() => { addCartElement(); goToPayment(); }} className="pop-cart-button-2">
+                            Checkout
+                        </button>
+                    </div>
+                </div>
+                
+                </>
+            )}
             <div className="main-box">
                 <div className="item-img-top-box">
                     <div className="img-display">
                         <div className="selected-item-img">
-                            <img src="https://media.istockphoto.com/id/473769326/photo/funny-cat-in-the-store.jpg?s=612x612&w=0&k=20&c=ri8C8fk_0qfbZHwXlC7M1c_vyiPr_Gx2jDAYRti7XYA=" alt="" className="selected-item-image" />
+                            <img src={img1_1} alt="" className="selected-item-image" />
                         </div>
-                        <div className="buttons">
-                            <button onClick={() => { addCartElement(); popupMessage(); }} className="buttons cart-button-1">
-                                Add to Cart
-                            </button>
-                            <ToastContainer
-                                position="bottom-center"
-                                autoClose={4000}
-                                hideProgressBar={false}
-                                newestOnTop={false}
-                                closeOnClick
-                                rtl={false}
-                                pauseOnFocusLoss
-                                draggable
-                                pauseOnHover
-                                theme="light"
-                            />
-                            <button onClick={goToPayment} className="buttons cart-button-2">
-                                Buy Now
-                            </button>
-                        </div>
-
-                        {/* {showPopUp && (
-                            <div className="popBar">
-                                <div className="my-message">
-                                    Added to Cart
-                                </div>
-                            </div>
-                        )} */}
                     </div>
                 </div>
                 <div className="item-details-top-box">
                     <div className="item-details-box">
-                        <div className="img-detail-title">Go with the Trend</div>
+                        <div className="img-detail-title">Anvil L/S Crew Neck - Grey</div>
                         <div className="img-detail-price" id="items-price" > $ 23.45</div>
                         <div className="img-detail-size">
                             <label style={{ color: "grey", fontSize: "14px" }}>Size</label>
@@ -134,7 +144,7 @@ function Page5(props) {
                             A versatile full-zip that you can wear all day long and even to the gym. This technical shell features moisture-wicking fabric, added stretch and a hidden pocket for your smartphone or media player.
                         </div>
                         <div className="img-detail-features">
-                            <div className="img-feature-title">Features</div>
+                            <div className="img-feature-title">Features :</div>
                             <div className="img-feature-content">
                                 <ul>
                                     <li className="img-features-details"> 100% polyester.</li>
@@ -146,22 +156,15 @@ function Page5(props) {
                             </div>
                         </div>
                     </div>
+                    <div className="buttons">
+                        <button onClick={() => { addCartElement(); popupMessage(); }} className="cart-button">
+                            ADD TO CART
+                        </button>
+                    </div>
                 </div>
-                < button onClick={() => { addCartElement(); popupMessage(); }} className="cart-button-mobile" >
-                    Add to Cart
+                <button onClick={() => { addCartElement(); popupMessage(); }} className="cart-button-mobile">
+                    ADD TO CART
                 </button>
-                <ToastContainer
-                    position="bottom-center"
-                    autoClose={3000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                    theme="light"
-                />
             </div>
 
         </>
@@ -169,3 +172,41 @@ function Page5(props) {
 }
 
 export default Page5;
+{/* <button onClick={goToPayment} className="buttons cart-button-2">
+Buy Now
+</button> */}
+{/* <div className="buttons">
+    <button onClick={() => { addCartElement(); popupMessage(); }} className="buttons cart-button-1">
+        Add to Cart
+    </button>
+    <ToastContainer
+        position="bottom-center"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+    />
+
+</div> */}
+
+// < button onClick={() => { addCartElement(); popupMessage(); }} className="cart-button-mobile" >
+//                     Add to Cart
+//                 </button>
+//                 <ToastContainer
+//                     position="bottom-center"
+//                     autoClose={3000}
+//                     hideProgressBar={false}
+//                     newestOnTop={false}
+//                     closeOnClick
+//                     rtl={false}
+//                     pauseOnFocusLoss
+//                     draggable
+//                     pauseOnHover
+//                     theme="light"
+//                 />
+//                    <div onClick={removeRemovePopupMessage} className="closing-popup-bar-window"></div>
