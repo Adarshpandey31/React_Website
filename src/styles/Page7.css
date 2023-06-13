@@ -3,6 +3,7 @@
     min-height: 77vh;
     /* border: 1px solid black; */
     /* padding: ; */
+    margin-bottom: 20px;
 }
 .payment-title{
     /* border: 1px solid red; */
@@ -22,45 +23,43 @@
     /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
-    padding: 20px;
-    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 80px;
+    justify-content: center;
+    text-align: center;
 }
 .main-sub-forms{
     /* border: 1px solid grey; */
     display: block;
     text-align: center;
-    width: 50%;
-    padding: 100px;
+    /* width: 50%; */
+    padding: 20px;
     padding-top: 0;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 .main-account-details{
-    margin-right: 0;
-    padding-right: 50px;
+    margin-right: 30px;
 }
 .main-payment-method{
-    margin-left: 0;
-    padding-left: 50px;
+    margin-left: 30px;
 }
 .sub-forms-headings {
     /* border: 1px solid pink; */
     font-weight: bold;
-    margin: 2px;
+    /* margin: 2px; */
     text-align: left;
 }
 .sub-forms-details{
     /* border: 1px solid green; */
-    margin: 5px;
+    margin-top: 5px;
     text-align: center;
     /* position: fixed; */
 }
 
-.account-details{
-    padding-right: 0;
-    margin-right: 0;
-    margin-bottom: 10px;
-} 
 .shipping-address-details{
     padding-right: 0;
     margin-right: 0;   
@@ -91,7 +90,7 @@
     margin-bottom: 20px;
     border: 0;
     border-bottom: 0.5px solid rgb(101, 93, 93, 0.8);
-    width: 100%;
+    width: 95%;
 }
 .sub-forms-details form .specific-input{
     /* border: 1px solid yellow; */
@@ -118,53 +117,43 @@
     margin-left: 10px;
     width: 48%;
 }
-.checkbox-adding-address{
+.checkbox-adding-address {
     display: flex;
     flex-direction: column;
     /* border: 1px solid brown; */
-    /* padding: 2px; */
-    padding: 0px;
-}
-
-
-.checkbox-data{
+    padding: 0;
+  }
+  
+  .checkbox-data {
     /* border: 1px solid rgb(113, 6, 6); */
-    padding: 4px;
-    text-align: left;
     display: flex;
     flex-direction: row;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-left: 0;
-    /* align-items: flex-start; */
-    /* justify-content: flex-start; */
-    padding-left: 0;
-    
-}
-.billing-address-checkbox{
-    /* border: 1px solid rgb(113, 6, 6); */
-    padding: 5em;
-    margin-left: -100px;
-    width: 50%;
-}
-
-.checkbox-text-content{
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .billing-address-checkbox {
+    width: auto;
+  }
+  
+  .checkbox-text-content {
     padding: 0;
-    margin-left: -100px;
-}
-@media (max-width : 1490px)
-{
-    .checkbox-text-content{
-        padding: 0;
-        margin-left: 0;
-        position: relative;
+    margin: 0;
+    margin-left: 5px;
+  }
+  
+  @media (max-width: 1490px) {
+    .checkbox-text-content {
+      padding: 0;
     }
-    .billing-address-checkbox{
-        /* border: 1px solid rgb(113, 6, 6); */
-        padding: 5em;
-        margin-left: -100px;
-        width: 50%;
+    .billing-address-checkbox {
+      /* border: 1px solid rgb(113, 6, 6); */
+      /* padding: 5em; */
+      /* margin-left: -100px; */
     }
-}
+  }
 
 form button{
     border-radius: 2px;
@@ -179,3 +168,50 @@ form button{
     font-size: 16px;
     pointer-events: auto;
 }
+
+@media (max-width : 900px) {
+    .main-account-details{
+        margin-right: 0px;
+    }
+    .main-payment-method{
+        margin-left: 0px;
+    }
+}
+@media (max-width :700px) {
+    
+.payment-details-box{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 80px;
+}
+.main-sub-forms{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+}
+@media (max-width :450px) {
+    
+    .main-sub-forms{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    }
+    @media (max-width :350px) {
+    
+        .main-sub-forms{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        }
+        @media (max-width :270px) {
+    
+            .main-sub-forms{
+                margin-left: 2px;
+                margin-right: 2px;
+            }
+            }
