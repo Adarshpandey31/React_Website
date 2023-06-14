@@ -28,20 +28,20 @@ function ItemList(props) {
     setPrice(num * 12.30);
   }, [num]);
 
-  const incNum = () => {
-    setNum(num + 1);
-    props.addItemtoCart(props.itemId, props.size, num + 1);
-  };
+  // const incNum = () => {
+  //   setNum(num + 1);
+  //   props.addItemtoCart(props.itemId, props.size, num + 1);
+  // };
 
-  const decNum = () => {
-    if (num > 0) {
-      setNum(num - 1);
-      props.addItemtoCart(props.itemId, props.size, num - 1);
-    }
-    if (num === 1) {
-      removeItem();
-    }
-  };
+  // const decNum = () => {
+  //   if (num > 0) {
+  //     setNum(num - 1);
+  //     props.addItemtoCart(props.itemId, props.size, num - 1);
+  //   }
+  //   if (num === 1) {
+  //     removeItem();
+  //   }
+  // };
 
   const removeItem = () => {
     props.removeItem(props.itemId, props.size);
@@ -56,6 +56,7 @@ function ItemList(props) {
 
   const setValue = (e) =>{
     setNum(e.target.value);
+    props.addItemtoCart(props.itemId, props.size, e.target.value);
   }
 
   return (

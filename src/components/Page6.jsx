@@ -54,11 +54,13 @@ function CartItem(props) {
         return count;
       }, 0);
       setCartSize(cartsize);
+      setTotalPrice(cartsize*12.30);
     }
     else{
       setCartSize(0);
+      setTotalPrice(0);
     }
-    setTotalPrice(cartSize*19.30);
+    
     
   }, [props.cartList]);
 
