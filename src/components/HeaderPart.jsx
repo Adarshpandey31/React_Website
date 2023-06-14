@@ -2,13 +2,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import logo_img from '../assets/logo1.png';
 import * as FaIcons from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function HeaderPart(props) {
   try {
     const [sidebarOpen, setSidebar] = useState(false);
     const [cartSize, setCartSize] = useState(props.cartList ? props.cartList.length : 0);
+    const [activeLink, setActiveLink] = useState('');
     const sidebarRef = useRef(null);
+    const location = useLocation();
 
     const removeCartSize = () => {
       if (props.cartList && props.cartList.length === 0) {
@@ -30,8 +32,8 @@ function HeaderPart(props) {
       else{
         setCartSize(0);
       }
-      
-    }, [props.cartList]);
+      setActiveLink(location.pathname);
+    }, [props.cartList, location]);
 
     const toggleSidebar = () => {
       setSidebar(!sidebarOpen);
@@ -56,7 +58,6 @@ function HeaderPart(props) {
         window.removeEventListener("resize", handleResize);
       };
     }, []);
-
     return (
       <>
         <div className={`topContainer`} >
@@ -68,10 +69,10 @@ function HeaderPart(props) {
             </Link>
           </div>
           <nav className="navbar" >
-            <Link to="/mens_outerwear" className="column first">Men&apos;s Outerwear</Link>
-            <Link to="/ladies_outerwear" className="column second">Ladies Outerwear</Link>
-            <Link to="/mens_tshirts" className="column third">Men&apos;s T-Shirts</Link>
-            <Link to="/ladies_tshirts" className="column fourth">Ladies T-Shirts</Link>
+            <Link to="/mens_outerwear" className={`column first ${activeLink === '/mens_outerwear' ? 'active' : ''}`}>Men&apos;s Outerwear</Link>
+            <Link to="/ladies_outerwear" className={`column second ${activeLink === '/ladies_outerwear' ? 'active' : ''}`}>Ladies Outerwear</Link>
+            <Link to="/mens_tshirts" className={`column third ${activeLink === '/mens_tshirts' ? 'active' : ''}`}>Men&apos;s T-Shirts</Link>
+            <Link to="/ladies_tshirts" className={`column fourth ${activeLink === '/ladies_tshirts' ? 'active' : ''}`}>Ladies T-Shirts</Link>
           </nav>
 
           <Link to='#' className="hamburger-icon" onClick={toggleSidebar}>
@@ -92,10 +93,10 @@ function HeaderPart(props) {
                 <li>
                   <div className="horizontal-line"></div>
                 </li>
-                <li><Link to="/mens_outerwear" className="column first">Men&apos;s Outerwear</Link></li>
-                <li><Link to="/ladies_outerwear" className="column second">Ladies Outerwear</Link></li>
-                <li><Link to="/mens_tshirts" className="column third">Men&apos;s T-Shirts</Link></li>
-                <li><Link to="/ladies_tshirts" className="column fourth">Ladies T-Shirts</Link></li>
+                <Link to="/mens_outerwear" className={`sidebar-column first ${activeLink === '/mens_outerwear' ? 'active' : ''}`}>Men&apos;s Outerwear</Link>
+                <Link to="/ladies_outerwear" className={`sidebar-column second ${activeLink === '/ladies_outerwear' ? 'active' : ''}`}>Ladies Outerwear</Link>
+                <Link to="/mens_tshirts" className={`sidebar-column third ${activeLink === '/mens_tshirts' ? 'active' : ''}`}>Men&apos;s T-Shirts</Link>
+                <Link to="/ladies_tshirts" className={`sidebar-column fourth ${activeLink === '/ladies_tshirts' ? 'active' : ''}`}>Ladies T-Shirts</Link>
               </ul>
             </div>
           </div>

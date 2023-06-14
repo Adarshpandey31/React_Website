@@ -1,5 +1,7 @@
 /*eslint-disable*/
-import React from 'react';
+import React, { useState, useEffect, useRef } from "react";
+import * as FaIcons from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom';
 import HeaderPart from '../components/HeaderPart.jsx';
 import Page1 from '../components/Page1.jsx';
 import Footer from '../components/Footer.jsx';

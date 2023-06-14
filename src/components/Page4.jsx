@@ -1,5 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+/*eslint-disable*/
+import React, { useState, useEffect, useRef } from "react";
+import * as FaIcons from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom';
 import ladies_tshirts from '../assets/ladies_tshirts.jpg';
 import img4_1 from '../assets/ladies_tshirts/14-1B.jpg';
 import img4_2 from '../assets/ladies_tshirts/14-2B.jpg';

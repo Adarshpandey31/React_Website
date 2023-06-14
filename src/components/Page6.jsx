@@ -1,10 +1,13 @@
 /*eslint-disable*/
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ItemsList from './Page6ItemList';
 import logo_img from '../assets/logo1.png';
+import { useNavigate } from 'react-router-dom';
 
 function CartItem(props) {
   const [emptyCart, setEmptyCart] = useState(props.cartList.length === 0);
+  const [cartSize, setCartSize] = useState(props.cartList ? props.cartList.length : 0);
+  const [totalPrice, setTotalPrice] = useState(props.cartList ? props.cartList.length*12.30 : 0)
 
   let addCartitem = (id, size, quantity) => {
     console.log(props.cartList);
@@ -38,6 +41,27 @@ function CartItem(props) {
     }
   };
 
+  const navigate = useNavigate();
+  const goToPayment = () => {
+    navigate('/checkout');
+  }
+
+  useEffect(() => {
+    if (props.cartList && props.cartList.length !== 0)
+    {
+      const cartsize = props.cartList.reduce((count, item)=>{
+        count = count + item.quantity ;
+        return count;
+      }, 0);
+      setCartSize(cartsize);
+    }
+    else{
+      setCartSize(0);
+    }
+    setTotalPrice(cartSize*19.30);
+    
+  }, [props.cartList]);
+
   return (
     <>
       {emptyCart ? (
@@ -47,10 +71,16 @@ function CartItem(props) {
           is empty!
         </div>
       ) : (
+
+        <>
         <div className="cart-item-top-box">
           <div className="cart-item-checkout-Heading">
-            Please Checkout here!
+           Your Cart 
+           <div className="span-cart-items">
+            ({cartSize} item)
           </div>
+          </div>
+         
 
           {props.cartList.map((cartItem) => (
             <ItemsList
@@ -64,12 +94,18 @@ function CartItem(props) {
             />
           )
           )}
-          <div className="cart-remove-button">
+          {/* <div className="cart-remove-button">
             <button type="button" onClick={removeAll} className="cart-item-remove">
               Remove all
             </button>
+          </div> */}
+          <div className="total-checkout">
+            <div className="total-price"> Total: &nbsp; &nbsp; &nbsp; &nbsp; ${totalPrice.toFixed(2)}</div>
+            <button onClick={goToPayment} className="checkout-button">CHECKOUT</button>
           </div>
         </div>
+        <button onClick={goToPayment} className="checkout-button-bottom">CHECKOUT</button>
+        </>
       )}
     </>
   );

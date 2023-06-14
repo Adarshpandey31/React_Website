@@ -1,6 +1,8 @@
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+/*eslint-disable*/
+import React, { useState, useEffect, useRef } from "react";
+import * as FaIcons from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom';
 import ladies_outerwear from '../assets/ladies_outerwear.jpg';
 import img2_1 from '../assets/ladies_outerwear/11-1B.jpg';
 import img2_2 from '../assets/ladies_outerwear/11-2B.jpg';
