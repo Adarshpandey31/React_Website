@@ -3,13 +3,87 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, useParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import img1_1 from '../assets/mens_outerwear/10-1B.jpg';
 import * as FaIcons from 'react-icons/fa';
+import img1_2 from '../assets/mens_outerwear/10-2B.jpg';
+import img1_1 from '../assets/mens_outerwear/10-1B.jpg';
+import img1_3 from '../assets/mens_outerwear/10-3B.jpg';
+import img1_4 from '../assets/mens_outerwear/10-4B.jpg';
+import img1_5 from '../assets/mens_outerwear/10-5B.jpg';
+import img1_6 from '../assets/mens_outerwear/10-6B.jpg';
+import img1_7 from '../assets/mens_outerwear/10-7B.jpg';
+import img1_8 from '../assets/mens_outerwear/10-8.jpg';
+import img1_9 from '../assets/mens_outerwear/10-9.jpg';
+import img1_0 from '../assets/mens_outerwear/10-0B.jpg';
+import img2_1 from '../assets/ladies_outerwear/11-1B.jpg';
+import img2_2 from '../assets/ladies_outerwear/11-2B.jpg';
+import img2_3 from '../assets/ladies_outerwear/11-3B.jpg';
+import img2_4 from '../assets/ladies_outerwear/11-4B.jpg';
+import img2_5 from '../assets/ladies_outerwear/11-5B.jpg';
+import img2_6 from '../assets/ladies_outerwear/11-6B.jpg';
+import img3_1 from '../assets/mens_tshirts/101-1B.jpg';
+import img3_2 from '../assets/mens_tshirts/101-2B.jpg';
+import img3_3 from '../assets/mens_tshirts/101-3B.jpg';
+import img3_4 from '../assets/mens_tshirts/101-4B.jpg';
+import img3_5 from '../assets/mens_tshirts/101-5B.jpg';
+import img3_6 from '../assets/mens_tshirts/101-6B.jpg';
+import img3_7 from '../assets/mens_tshirts/101-7B.jpg';
+import img3_8 from '../assets/mens_tshirts/101-8B.jpg';
+import img3_9 from '../assets/mens_tshirts/101-9B.jpg';
+import img3_0 from '../assets/mens_tshirts/101-0B.jpg';
+import img4_1 from '../assets/ladies_tshirts/14-1B.jpg';
+import img4_2 from '../assets/ladies_tshirts/14-2B.jpg';
+import img4_3 from '../assets/ladies_tshirts/14-3B.jpg';
+import img4_4 from '../assets/ladies_tshirts/14-4B.jpg';
+import img4_5 from '../assets/ladies_tshirts/14-5B.jpg';
+import img4_6 from '../assets/ladies_tshirts/14-6B.jpg';
+import img4_7 from '../assets/ladies_tshirts/14-7B.jpg';
+import img4_8 from '../assets/ladies_tshirts/14-8B.jpg';
+import img4_9 from '../assets/ladies_tshirts/14-9B.jpg';
+import img4_0 from '../assets/ladies_tshirts/14-0B.jpg';
 
 function Page5(props) {
     const navigate = useNavigate();
     const [showPopUp, setShowPopUp] = useState(false);
     const popupRef = useRef(null);
+
+    const imageMap = {
+        img1_2 : img1_2,
+        img1_1 : img1_1,
+        img1_3 : img1_3,
+        img1_4 : img1_4,
+        img1_5 : img1_5,
+        img1_6 : img1_6,
+        img1_7 : img1_7,
+        img1_8 : img1_8,
+        img1_9 : img1_9,
+        img1_0 : img1_0,
+        img2_1 : img2_1,
+        img2_2 : img2_2,
+        img2_3 : img2_3,
+        img2_4 : img2_4,
+        img2_5 : img2_5,
+        img2_6 : img2_6,
+        img3_1 : img3_1,
+        img3_2 : img3_2,
+        img3_3 : img3_3,
+        img3_4 : img3_4,
+        img3_5 : img3_5,
+        img3_6 : img3_6,
+        img3_7 : img3_7,
+        img3_8 : img3_8,
+        img3_9 : img3_9,
+        img3_0 : img3_0,
+        img4_1 : img4_1,
+        img4_2 : img4_2,
+        img4_3 : img4_3,
+        img4_4 : img4_4,
+        img4_5 : img4_5,
+        img4_6 : img4_6,
+        img4_7 : img4_7,
+        img4_8 : img4_8,
+        img4_9 : img4_9,
+        img4_0 : img4_0
+      };
 
     //notifying item added to cart
     const popupMessage = () => {
@@ -108,7 +182,7 @@ function Page5(props) {
                 <div className="item-img-top-box">
                     <div className="img-display">
                         <div className="selected-item-img">
-                            <img src={img1_1} alt="" className="selected-item-image" />
+                            <img src={imageMap[id_value]} alt="" className="selected-item-image" />
                         </div>
                     </div>
                 </div>

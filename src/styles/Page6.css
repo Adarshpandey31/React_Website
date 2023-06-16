@@ -187,11 +187,12 @@
 .cart-item-details-qty select {
     /* border: 1px solid rgb(52, 42, 165); */
     border: 0;
-    width: 40px;
+    
     font-size: 15px;
     font-weight: 500;
     color: rgb(0, 0, 0);
-    margin-left: 15px;
+    margin-left: 0px;
+    width: 50px;
 }
 
 .cart-item-details-qty-heading {
@@ -199,7 +200,6 @@
     font-size: 13px;
     color: rgb(97, 106, 113);
     margin: 0px;
-    margin-left: 10px;
 }
 
 .cart-item-details-size {
@@ -318,15 +318,10 @@
         
     }
 
-    .cart-item-details-qty-heading {
-        /* border: 1px solid rgb(52, 42, 165); */
-        margin-left: 5px;
-    }
-
     .cart-item-details-qty select {
         /* border: 1px solid rgb(52, 42, 165); */
-        margin-left: 8px;
-        width: 30px;
+        margin-left: 0px;
+        width: 50px;
     }
     .total-checkout{
         display: flex;
@@ -383,8 +378,8 @@
     .prod-img-and-name {
         /* border: 2px solid rgb(149, 38, 38); */
         height: 30px;
-        display: flex;
-        flex-direction: row;
+        /* display: flex;
+        flex-direction: row; */
         align-items: start;
         width: 100%;
     }
@@ -446,16 +441,18 @@
         /* padding: 10px; */
         padding: 10px;
         padding-right: 0px;
-        margin-right: 10px;
+        margin-right: 0px;
     }
 
     .cart-item-details-qty select {
         border: 0px solid rgb(52, 42, 165);
         width: 40px;
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 500;
         color: rgb(0, 0, 0);
         margin-left: 0px;
+        width: 50px;
+        margin-right: 5px;
     }
 
     .cart-item-details-qty-heading {
@@ -477,7 +474,7 @@
         width: unset;
         padding-left: 10px;
         padding-right: 10px;
-        margin-right: 15px;
+        margin-right: 5px;
     }
 
     .cart-item-price {
@@ -592,7 +589,7 @@
     }
     .cart-details-col-item-name{
         display: unset;
-        border: 1px solid pink;
+        /* border: 1px solid pink; */
         min-width: fit-content;
         font-size: 13px;
         font-weight: 500;
@@ -621,7 +618,7 @@
     .cart-details-col-qty{
         font-size: 13px;
         display: unset;
-        width: 40px;
+        width: 50px;
         display: flex;
         flex-direction: row;
         padding: 1px;

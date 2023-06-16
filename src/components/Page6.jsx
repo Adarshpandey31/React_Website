@@ -4,6 +4,7 @@ import ItemsList from './Page6ItemList';
 import logo_img from '../assets/logo1.png';
 import { useNavigate } from 'react-router-dom';
 
+
 function CartItem(props) {
   const [emptyCart, setEmptyCart] = useState(props.cartList.length === 0);
   const [cartSize, setCartSize] = useState(props.cartList ? props.cartList.length : 0);
