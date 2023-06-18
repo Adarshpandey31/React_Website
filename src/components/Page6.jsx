@@ -3,54 +3,23 @@ import React, { useState, useEffect } from 'react';
 import ItemsList from './Page6ItemList';
 import logo_img from '../assets/logo1.png';
 import { useNavigate } from 'react-router-dom';
-
+import { UseSelector, useDispatch, useSelector } from 'react-redux';
+import {addToCart, setCartList,removeFromCart} from '../features/items/cartSlice'
 
 function CartItem(props) {
-  const [emptyCart, setEmptyCart] = useState(props.cartList.length === 0);
-  const [cartSize, setCartSize] = useState(props.cartList ? props.cartList.length : 0);
-  const [totalPrice, setTotalPrice] = useState(props.cartList ? props.cartList.length*12.30 : 0)
-
-  let addCartitem = (id, size, quantity) => {
-    console.log(props.cartList);
-
-    if (typeof props.setcartList === 'function') {
-      const updatedCartList = props.cartList.map(item => {
-        if (item.id === id && item.size === size) {
-          //set value according to the value showing in quantity tab
-          return { ...item, quantity: parseInt(quantity) };
-        }
-        return item;
-      });
-      props.setcartList(updatedCartList);
-    } else {
-      console.error('setcartList is not a function');
-    }
-  };
-
-  const removeAll = () => {
-    props.setcartList([]);
-    setEmptyCart(true);
-  };
-
-  const removeItem = (itemId, size) => {
-    const updatedCartList = props.cartList.filter(item => item.id !== itemId || item.size !== size);
-    props.setcartList(updatedCartList);
-
-    //if no elements are present, make the cart empty
-    if (updatedCartList.length === 0) {
-      setEmptyCart(true);
-    }
-  };
-
+  const cartList = useSelector((state) => state.cart.cartList );
+  const dispatch = useDispatch();
+  const [emptyCart, setEmptyCart] = useState(cartList.length === 0);
+  const [cartSize, setCartSize] = useState(cartList ? cartList.length : 0);
+  const [totalPrice, setTotalPrice] = useState(cartList ? cartSize*12.30 : 0)
   const navigate = useNavigate();
   const goToPayment = () => {
     navigate('/checkout');
   }
-
   useEffect(() => {
-    if (props.cartList && props.cartList.length !== 0)
+    if (cartList && cartList.length !== 0)
     {
-      const cartsize = props.cartList.reduce((count, item)=>{
+      const cartsize = cartList.reduce((count, item)=>{
         count = count + item.quantity ;
         return count;
       }, 0);
@@ -60,10 +29,10 @@ function CartItem(props) {
     else{
       setCartSize(0);
       setTotalPrice(0);
+      setEmptyCart(true);
     }
     
-    
-  }, [props.cartList]);
+  }, [cartList]);
 
   return (
     <>
@@ -84,16 +53,11 @@ function CartItem(props) {
           </div>
           </div>
          
-
-          {props.cartList.map((cartItem) => (
+          {cartList.map((cartItem) => (
             <ItemsList
               key={cartItem.id}
               itemId={cartItem.id}
-              removeItem={removeItem}
-              cartList={props.cartList}
-              setcartList={props.setcartList}
               size={cartItem.size}
-              addItemtoCart={addCartitem}
             />
           )
           )}

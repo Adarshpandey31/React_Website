@@ -10,9 +10,9 @@ function Page6Cart(props) {
         // style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}
         <>
             <div className='hide-navbar'>
-               <HeaderPart cartList ={props.cartList} setcartList ={props.setcartList}/>
+               <HeaderPart />
             </div>
-            <Page6 cartList ={props.cartList} setcartList ={props.setcartList} />
+            <Page6 />
             <Footer />
         </>
     );

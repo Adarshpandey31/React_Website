@@ -7,11 +7,10 @@ import Footer from '../components/Footer.jsx';
 function Page7Payment(props) {
     return (
         <>
-            <HeaderPart cartList={props.cartList} setcartList={props.setcartList} />
+            <HeaderPart />
             <Page7 />
             <Footer />
         </>
     )
 }
-
 export default Page7Payment;

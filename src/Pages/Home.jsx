@@ -8,7 +8,7 @@ import Footer from '../components/Footer.jsx';
 function Home(props) {
   return (
     <>
-    <HeaderPart  cartList={props.cartList} setcartList={props.setcartList} />
+    <HeaderPart  />
     <BodyHome  />
     <Footer />
     </>

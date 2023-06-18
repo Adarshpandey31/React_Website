@@ -3,15 +3,13 @@ import React, { useState } from 'react';
 
 function Page7() {
   const [billingAddr, setbillingAddr] = useState(false);
-
   const addbillingaddress = () => {
     setbillingAddr(!billingAddr);
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle form submission here
-    console.log('Form submitted');
+    // console.log('Form submitted');
   };
 
   return (

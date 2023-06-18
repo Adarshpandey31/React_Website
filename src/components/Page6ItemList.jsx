@@ -2,6 +2,8 @@
 import React, { useState, useParams, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import * as FaIcons from 'react-icons/fa';
+import { useDispatch, useSelector } from 'react-redux';
+import {addToCart, removeFromCart, changeQuantity} from '../features/items/cartSlice'
 import img1_2 from '../assets/mens_outerwear/10-2B.jpg';
 import img1_1 from '../assets/mens_outerwear/10-1B.jpg';
 import img1_3 from '../assets/mens_outerwear/10-3B.jpg';
@@ -39,47 +41,28 @@ import img4_8 from '../assets/ladies_tshirts/14-8B.jpg';
 import img4_9 from '../assets/ladies_tshirts/14-9B.jpg';
 import img4_0 from '../assets/ladies_tshirts/14-0B.jpg';
 
-// function ItemList(props) {
-
-//     let id = props.itemsId;
-//     let [num, setNum] = useState(Number());
-//     let [price, setPrice] = useState(Number(12.30));
-//     //num = item[id].quantity
-
-//     const removeItem = () =>{
-//          props.cartList.filter( items => items.id != props.itemsId ); 
-//     };
-
-//     let handleChange = (e) => {
-//         setNum(e.target.value);
-//         setPrice(e.target.value);
-//     }
-
 function ItemList(props) {
   const [num, setNum] = useState(0);
   const [price, setPrice] = useState(12.30);
-
+  const cartList = useSelector((state) => state.cart.cartList)
+  const dispatch = useDispatch();
+  const removeItem = () => {
+    dispatch(removeFromCart({ id: props.itemId, size: props.size }));
+  };
+  const setValue = (e) => {
+    setNum(e.target.value);
+    dispatch(changeQuantity({id: props.itemId, size: props.size, quantity:parseInt(e.target.value)}) );
+  }
   useEffect(() => {
     setPrice(num * 12.30);
-  }, [num]);
-
-  // const incNum = () => {
-  //   setNum(num + 1);
-  //   props.addItemtoCart(props.itemId, props.size, num + 1);
-  // };
-
-  // const decNum = () => {
-  //   if (num > 0) {
-  //     setNum(num - 1);
-  //     props.addItemtoCart(props.itemId, props.size, num - 1);
-  //   }
-  //   if (num === 1) {
-  //     removeItem();
-  //   }
-  // };
+    const item = cartList.find(item => item.id === props.itemId && item.size === props.size);
+    if (item) {
+      setNum(item.quantity);
+    }
+  }, [cartList, props.itemId, num]);
 
   const id = props.itemId;
-  console.log(id);
+  // console.log(id);
   const imageMap = {
     img1_2 : img1_2,
     img1_1 : img1_1,
@@ -118,22 +101,6 @@ function ItemList(props) {
     img4_9 : img4_9,
     img4_0 : img4_0
   };
-
-  const removeItem = () => {
-    props.removeItem(props.itemId, props.size);
-  };
-
-  useEffect(() => {
-    const item = props.cartList.find(item => item.id === props.itemId && item.size === props.size);
-    if (item) {
-      setNum(item.quantity);
-    }
-  }, [props.cartList, props.itemId]);
-
-  const setValue = (e) => {
-    setNum(e.target.value);
-    props.addItemtoCart(props.itemId, props.size, e.target.value);
-  }
 
   return (
     <div className="top-cart-item">

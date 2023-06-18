@@ -3,27 +3,33 @@ import React, { useState, useEffect, useRef } from "react";
 import logo_img from '../assets/logo1.png';
 import * as FaIcons from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
+import { useSelector } from "react-redux";
 
 function HeaderPart(props) {
   try {
+    const cartList  = useSelector((state) => state.cart.cartList)
     const [sidebarOpen, setSidebar] = useState(false);
-    const [cartSize, setCartSize] = useState(props.cartList ? props.cartList.length : 0);
+    const [cartSize, setCartSize] = useState(cartList ? cartList.length : 0);
     const [activeLink, setActiveLink] = useState('');
     const sidebarRef = useRef(null);
     const location = useLocation();
-
+    const toggleSidebar = () => {
+      setSidebar(!sidebarOpen);
+    };
+    const closeSidebar = () => {
+      if (sidebarOpen) {
+        setSidebar(!sidebarOpen);
+      }
+    };
     const removeCartSize = () => {
-      if (props.cartList && props.cartList.length === 0) {
+      if (cartList && cartList.length === 0) {
         setCartSize(0);
-        console.log(cartSize);
       }
     }
     useEffect(() => {
-      // console.log("props.cartList:", props.cartList);
-      // console.log(cartSize);
-      if (props.cartList && props.cartList.length !== 0)
+      if (cartList && cartList.length !== 0)
       {
-        const cartsize = props.cartList.reduce((count, item)=>{
+        const cartsize = cartList.reduce((count, item)=>{
           count = count + item.quantity ;
           return count;
         }, 0);
@@ -33,18 +39,7 @@ function HeaderPart(props) {
         setCartSize(0);
       }
       setActiveLink(location.pathname);
-    }, [props.cartList, location]);
-
-    const toggleSidebar = () => {
-      setSidebar(!sidebarOpen);
-    };
-
-    const closeSidebar = () => {
-      if (sidebarOpen) {
-        setSidebar(!sidebarOpen);
-      }
-    };
-
+    }, [cartList, location]);
     useEffect(() => {
       const handleResize = () => {
         const screenWidth = window.innerWidth;
@@ -52,7 +47,6 @@ function HeaderPart(props) {
           setSidebar(false);
         }
       };
-
       window.addEventListener("resize", handleResize);
       return () => {
         window.removeEventListener("resize", handleResize);

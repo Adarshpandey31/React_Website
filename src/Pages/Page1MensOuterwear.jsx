@@ -9,7 +9,7 @@ import Footer from '../components/Footer.jsx';
 function Page1MensOuterwear(props) {
   return (
     <>
-    <HeaderPart cartList={props.cartList} setcartList={props.setcartList}/>
+    <HeaderPart />
     <Page1 />
     <Footer />
     </>

@@ -9,7 +9,8 @@ body {
 
 .main-body-home{
     padding: 0;
-    /* margin-right: -2px; */
+    margin: 0;
+    /* border: 1px solid black; */
     margin-bottom: 80px;
 }
 

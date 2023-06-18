@@ -7,7 +7,7 @@ import Footer from '../components/Footer.jsx';
 function Page4LadiesTshirts(props) {
   return (
     <>
-    <HeaderPart cartList={props.cartList} setcartList={props.setcartList} />
+    <HeaderPart />
     <Page4 />
     <Footer />
     </>

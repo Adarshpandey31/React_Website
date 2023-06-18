@@ -8,8 +8,8 @@ function Page5ItemDetails(props) {
 
   return (
     <>
-      <HeaderPart cartList ={props.cartList} setcartList ={props.setcartList} />
-      <Page5 cartList ={props.cartList} setcartList ={props.setcartList} />
+      <HeaderPart  />
+      <Page5 />
       <div className="cart-item-footer">
       <Footer /></div>
     </>

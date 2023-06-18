@@ -1,11 +1,8 @@
 /* eslint-disable */
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
-// createRoutesFromElements, RouterProvider,errorElement,Outlet,
 import { BrowserRouter, Routes, Route, } from 'react-router-dom';
-// import HeaderPart from './components/HeaderPart.jsx';
-// import Body_Home from './components/Body_Home.jsx';
-// import Footer from './components/Footer.jsx';
+import store from './app/store';
+import { Provider } from 'react-redux';
 import Home from './Pages/Home.jsx';
 import Page1MensOuterwear from './Pages/Page1MensOuterwear.jsx';
 import Page2LadiesOuterwear from './Pages/Page2LadiesOuterwear.jsx';
@@ -28,35 +25,35 @@ import './styles/App.css';
 
 
 function App() {
-  //adding element to the cart
-  const [cartList, setcartList] = useState([]);
+  // const [cartList, setcartList] = useState([]);
 
   return (
     <>
 
       <BrowserRouter>
-
+      <Provider store ={store} >
         <Routes>
-          <Route path="/" element={<Home cartList={cartList} setcartList={setcartList} />} />
+          <Route path="/" element={<Home  />} />
           <Route path={"/mens_outerwear"}>
-            <Route index element={<Page1MensOuterwear cartList={cartList} setcartList={setcartList} />} />
-            <Route exact path="/mens_outerwear/details/:id" element={<Page5ItemDetails cartList={cartList} setcartList={setcartList} />} />
+            <Route index element={<Page1MensOuterwear />} />
+            <Route exact path="/mens_outerwear/details/:id" element={<Page5ItemDetails  />} />
           </Route>
           <Route path="/ladies_outerwear"  >
-            <Route index element={<Page2LadiesOuterwear cartList={cartList} setcartList={setcartList} />} />
-            <Route exact path="/ladies_outerwear/details/:id" element={<Page5ItemDetails cartList={cartList} setcartList={setcartList} />} />
+            <Route index element={<Page2LadiesOuterwear />} />
+            <Route exact path="/ladies_outerwear/details/:id" element={<Page5ItemDetails  />} />
           </Route>
           <Route path="/mens_tshirts"  >
-            <Route index element={<Page3MensTshirts cartList={cartList} setcartList={setcartList} />} />
-            <Route exact path="/mens_tshirts/details/:id" element={<Page5ItemDetails cartList={cartList} setcartList={setcartList} />} />
+            <Route index element={<Page3MensTshirts  />} />
+            <Route exact path="/mens_tshirts/details/:id" element={<Page5ItemDetails  />} />
           </Route>
           <Route path="/ladies_tshirts"  >
-            <Route index element={<Page4LadiesTshirts cartList={cartList} setcartList={setcartList} />} />
-            <Route exact path="/ladies_tshirts/details/:id" element={<Page5ItemDetails cartList={cartList} setcartList={setcartList} />} />
+            <Route index element={<Page4LadiesTshirts  />} />
+            <Route exact path="/ladies_tshirts/details/:id" element={<Page5ItemDetails  />} />
           </Route>
-          <Route path="/cart" element={<Page6Cart cartList={cartList} setcartList={setcartList} />} />
-          <Route path="/checkout" element={<Page7Payment cartList={cartList} setcartList={setcartList}  />} />
+          <Route path="/cart" element={<Page6Cart  />} />
+          <Route path="/checkout" element={<Page7Payment  />} />
         </Routes>
+        </Provider>
       </BrowserRouter>
     </>
 
